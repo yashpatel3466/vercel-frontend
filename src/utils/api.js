@@ -1,4 +1,4 @@
-const API_BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
+const API_BASE_URL = process.env.REACT_APP_API_URL || "https://render-backend-5-6fl0.onrender.com/api";
 
 // Debug: Log the API base URL
 console.log('API Base URL:', API_BASE_URL);
