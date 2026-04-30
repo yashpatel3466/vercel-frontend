@@ -1,0 +1,73 @@
+/* HEADER CONTAINER */
+.header {
+  height: 60px;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* ✅ WHITE HEADER */
+  background-color: #ffffff;
+
+  /* ✅ CLEAR SEPARATION FROM BODY */
+  border-bottom: 2px solid #e6e6e6;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* LEFT SIDE (LOGO + NAME) */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo-img {
+  width: 32px;
+  height: 32px;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: #5b5be0; /* Blue accent */
+  letter-spacing: 1px;
+}
+
+/* RIGHT SIDE (NAV BUTTONS) */
+.header-right {
+  display: flex;
+  gap: 30px;
+}
+
+.header-link {
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+/* HOVER UNDERLINE */
+.header-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #5b5be0;
+  transition: width 0.3s ease;
+}
+
+.header-link:hover::after {
+  width: 100%;
+}
+
+.header-link:hover {
+  color: #5b5be0;
+}

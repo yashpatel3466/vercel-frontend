@@ -1,0 +1,87 @@
+/* USER DASHBOARD HEADER */
+.user-dashboard-header {
+  height: 70px;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border-bottom: 2px solid #e6e6e6;
+}
+
+/* LEFT SIDE (LOGO + NAME) */
+.user-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-logo-img {
+  width: 32px;
+  height: 32px;
+}
+
+.user-logo-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: #5b5be0;
+  letter-spacing: 1px;
+}
+
+/* NAVIGATION */
+.user-header-nav {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.user-header-link {
+  background: none;
+  border: none;
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+/* HOVER UNDERLINE - Same as Header.css */
+.user-header-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #5b5be0;
+  transition: width 0.3s ease;
+}
+
+.user-header-link:hover::after {
+  width: 100%;
+}
+
+.user-header-link:hover {
+  color: #5b5be0;
+}
+
+.user-header-logout {
+  background: #5b5be0;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  transition: background 0.3s ease;
+}
+
+.user-header-logout:hover {
+  background: #4a4ac7;
+}
+

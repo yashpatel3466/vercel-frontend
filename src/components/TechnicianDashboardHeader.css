@@ -1,0 +1,208 @@
+/* TECHNICIAN DASHBOARD HEADER */
+.technician-dashboard-header {
+  height: 70px;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-bottom: 2px solid #e6e6e6;
+  position: relative;
+  z-index: 10;
+}
+
+/* LEFT SIDE (LOGO + NAME) */
+.technician-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.technician-logo-img {
+  width: 32px;
+  height: 32px;
+}
+
+.technician-logo-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: #5b5be0;
+  letter-spacing: 1px;
+}
+
+/* NAVIGATION */
+.technician-header-nav {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.technician-header-link {
+  background: none;
+  border: none;
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+/* HOVER UNDERLINE - Same as Header.css */
+.technician-header-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #5b5be0;
+  transition: width 0.3s ease;
+}
+
+.technician-header-link:hover::after {
+  width: 100%;
+}
+
+.technician-header-link:hover {
+  color: #5b5be0;
+}
+
+.technician-header-logout {
+  background: #5b5be0;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  transition: background 0.3s ease;
+}
+
+.technician-header-logout:hover {
+  background: #4a4ac7;
+}
+
+/* NOTIFICATIONS */
+.notification-container {
+  position: relative;
+}
+
+.notification-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notification-btn:hover {
+  background: #f0f0f0;
+}
+
+.notification-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #f44336;
+  /* Red */
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  height: 18px;
+  width: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.notification-dropdown {
+  position: absolute;
+  top: 120%;
+  right: -50px;
+  /* Adjust alignment */
+  width: 320px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  animation: slideDown 0.2s ease-out;
+}
+
+.notification-header {
+  padding: 12px 16px;
+  border-bottom: 1px solid #edf2f7;
+  font-weight: 700;
+  color: #2d3748;
+  background: #f7fafc;
+}
+
+.notification-list {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.notification-item {
+  padding: 12px 16px;
+  border-bottom: 1px solid #edf2f7;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  transition: background 0.2s;
+}
+
+.notification-item:hover {
+  background: #f8fafc;
+}
+
+.notif-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.notif-content {
+  font-size: 0.9rem;
+  color: #4a5568;
+  line-height: 1.4;
+}
+
+.notification-item.assigned .notif-content {
+  color: #2f855a;
+  font-weight: 500;
+}
+
+.notification-item.rejected .notif-content {
+  color: #c53030;
+  font-weight: 500;
+}
+
+.notification-empty {
+  padding: 24px;
+  text-align: center;
+  color: #a0aec0;
+  font-size: 0.9rem;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
