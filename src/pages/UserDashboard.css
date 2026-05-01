@@ -11,7 +11,6 @@
 .glass-overlay {
     position: absolute;
     top: 0;
-
     right: 0;
     bottom: 0;
     background: rgba(255, 255, 255, 0.05);
@@ -47,6 +46,146 @@
     display: flex;
     align-items: center;
     gap: 12px;
+}
+
+/* 🚀 MOBILE RESPONSIVE DESIGN */
+
+/* Mobile Devices (320px - 768px) */
+@media (max-width: 768px) {
+    .dashboard-container {
+        padding: 1rem;
+        margin: 0;
+    }
+    
+    .dashboard-header {
+        height: auto;
+        padding: 12px 16px;
+        flex-direction: column;
+        gap: 12px;
+        position: relative;
+    }
+    
+    .logo-section {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .header-actions {
+        width: 100%;
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .btn-action {
+        width: 100%;
+        padding: 12px 16px;
+        font-size: 14px;
+    }
+    
+    .user-page-title {
+        font-size: 20px;
+        text-align: center;
+        margin: 12px 0;
+    }
+    
+    .filters-section {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin: 16px 0;
+    }
+    
+    .filter-select {
+        width: 100%;
+        padding: 12px;
+        font-size: 14px;
+    }
+    
+    .complaints-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .complaint-card {
+        margin: 8px 0;
+        padding: 16px;
+        border-radius: 12px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin: 16px 0;
+    }
+    
+    .stat-card {
+        padding: 16px;
+        text-align: center;
+    }
+    
+    .complaint-form {
+        padding: 16px;
+        margin: 16px 0;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .form-group {
+        margin-bottom: 16px;
+    }
+    
+    .btn-create {
+        width: 100%;
+        padding: 14px 20px;
+        font-size: 14px;
+    }
+    
+    .btn-toggle-map {
+        width: 100%;
+        padding: 12px 16px;
+        font-size: 14px;
+    }
+}
+
+/* Tablet Devices (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .dashboard-container {
+        padding: 1.5rem;
+    }
+    
+    .dashboard-header {
+        padding: 0 24px;
+    }
+    
+    .complaints-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+    
+    .user-page-title {
+        font-size: 24px;
+    }
+}
+
+/* Desktop Devices (1025px and up) */
+@media (min-width: 1025px) {
+    .complaints-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
 }
 
 .logo-img {

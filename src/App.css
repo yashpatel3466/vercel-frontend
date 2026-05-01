@@ -36,3 +36,51 @@
     transform: rotate(360deg);
   }
 }
+
+/* 🚀 MOBILE RESPONSIVE DESIGN */
+
+/* Mobile Devices (320px - 768px) */
+@media (max-width: 768px) {
+  .App {
+    text-align: center;
+    padding: 0;
+  }
+  
+  .App-logo {
+    height: 30vmin;
+  }
+  
+  .App-header {
+    min-height: 100vh;
+    font-size: calc(8px + 2vmin);
+    padding: 16px;
+  }
+  
+  .App-link {
+    font-size: 14px;
+  }
+}
+
+/* Tablet Devices (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .App-logo {
+    height: 35vmin;
+  }
+  
+  .App-header {
+    font-size: calc(9px + 2vmin);
+    padding: 24px;
+  }
+}
+
+/* Desktop Devices (1025px and up) */
+@media (min-width: 1025px) {
+  .App-logo {
+    height: 40vmin;
+  }
+  
+  .App-header {
+    font-size: calc(10px + 2vmin);
+    padding: 32px;
+  }
+}
