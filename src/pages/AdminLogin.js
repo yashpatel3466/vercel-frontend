@@ -34,7 +34,7 @@ export default function AdminLogin() {
   };
 
   return (
-    <div style={styles.container}>
+    <div className="admin-login-container">
       <h2>Admin Login</h2>
 
       <input
@@ -53,15 +53,15 @@ export default function AdminLogin() {
         onChange={(e) => setPassword(e.target.value)}
       />
 
-      {error && <p style={{ color: "red" }}>{error}</p>}
+      {error && <p className="error-text">{error}</p>}
 
-      <button style={styles.button} onClick={handleLogin}>
+      <button className="btn btn-primary btn-login" onClick={handleLogin}>
         Login
       </button>
 
-      <div style={styles.links}>
-        <Link to="/login" style={styles.roleLink}>User Login</Link> |{" "}
-        <Link to="/technician/login" style={styles.roleLink}>Technician Login</Link>
+      <div className="role-text">
+        <Link to="/login" className="role-link">User Login</Link> |{" "}
+        <Link to="/technician/login" className="role-link">Technician Login</Link>
       </div>
     </div>
   );

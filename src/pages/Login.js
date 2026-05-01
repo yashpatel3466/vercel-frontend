@@ -57,7 +57,7 @@ if (!passwordRegex.test(password)) {
   };
 
   return (
-    <div style={styles.container}>
+    <div className="login-container">
       <h2>User Login</h2>
 
       <input
@@ -76,25 +76,25 @@ if (!passwordRegex.test(password)) {
         onChange={(e) => setPassword(e.target.value)}
       />
 
-      {error && <p style={{ color: "red", marginTop: "10px" }}>{error}</p>}
+      {error && <p className="error-text">{error}</p>}
 
-      <button style={styles.button} onClick={handleLogin}>
+      <button className="btn btn-primary btn-login" onClick={handleLogin}>
         Login
       </button>
 
-      <p style={styles.text}>
-        Don’t have an account?{" "}
-        <Link to="/register" style={styles.link}>
+      <p className="login-text">
+        Don't have an account?{" "}
+        <Link to="/register" className="login-link">
           Register
         </Link>
       </p>
 
-      <p style={styles.roleText}>
-        <Link to="/admin/login" style={styles.roleLink}>
+      <p className="role-text">
+        <Link to="/admin/login" className="role-link">
           Admin Login
         </Link>{" "}
         |{" "}
-        <Link to="/technician/login" style={styles.roleLink}>
+        <Link to="/technician/login" className="role-link">
           Technician Login
         </Link>
       </p>
