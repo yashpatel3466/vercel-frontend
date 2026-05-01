@@ -54,7 +54,7 @@ export default function TechnicianLogin() {
   };
 
   return (
-    <div className="technician-login-container">
+    <div style={styles.container}>
       <h2>Technician Login</h2>
 
       <input
@@ -73,25 +73,25 @@ export default function TechnicianLogin() {
         onChange={(e) => setPassword(e.target.value)}
       />
 
-      {error && <p className="error-text">{error}</p>}
+      {error && <p style={{ color: "red", marginTop: "10px" }}>{error}</p>}
 
-      <button className="btn btn-primary btn-login" onClick={handleLogin}>
+      <button style={styles.button} onClick={handleLogin}>
         Login
       </button>
 
-      <p className="role-text">
+      <p style={styles.text}>
         Don't have an account?{" "}
-        <Link to="/register" className="role-link">
+        <Link to="/register" style={styles.link}>
           Register
         </Link>
       </p>
 
-      <p className="role-text">
-        <Link to="/login" className="role-link">
+      <p style={styles.roleText}>
+        <Link to="/login" style={styles.roleLink}>
           User Login
         </Link>{" "}
         |{" "}
-        <Link to="/admin/login" className="role-link">
+        <Link to="/admin/login" style={styles.roleLink}>
           Admin Login
         </Link>
       </p>

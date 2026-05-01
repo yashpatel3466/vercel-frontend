@@ -64,7 +64,7 @@ if (!role) {
   };
 
   return (
-    <div className="register-container">
+    <div style={styles.container}>
       <h2>Register</h2>
 
       <input className="form-input" placeholder="Name"
@@ -76,35 +76,60 @@ if (!role) {
       <input type="password" className="form-input" placeholder="Password"
         value={password} onChange={e => setPassword(e.target.value)} />
 
-      {/* ROLE SELECT */}
+      {/* 🔽 ROLE SELECT */}
       <select
-        className="form-input"
-        value={role}
-        onChange={e => setRole(e.target.value)}
-      >
-        <option value="" disabled>
-          Select Role
-        </option>
-        <option value="user">User</option>
-        <option value="technician">Technician</option>
-      </select>
+  className="form-input"
+  value={role}
+  onChange={e => setRole(e.target.value)}
+>
+  <option value="" disabled>
+    Select Role
+  </option>
+  <option value="user">User</option>
+  <option value="technician">Technician</option>
+</select>
 
-      {error && <p className="error-text">{error}</p>}
-      {success && <p className="success-text">{success}</p>}
 
-      <button className="btn btn-primary btn-login" onClick={handleRegister}>
+      {error && <p style={{ color: "red" }}>{error}</p>}
+      {success && <p style={{ color: "green" }}>{success}</p>}
+
+      <button style={styles.button} onClick={handleRegister}>
         Register
       </button>
 
-      <p className="login-text">
+      <p style={{ marginTop: "15px" }}>
         Already have an account?{" "}
-        <Link to="/login" className="login-link">Login</Link>
-      </p>
+        <Link
+  to="/login"
+  style={{
+    textDecoration: "none",
+    fontWeight: "600",
+    color: "#5b5be0"
+  }}
+>
+  Login
+</Link>
 
-      <p className="role-text">
-        <Link to="/admin/login" className="role-link">Admin Login</Link> |{" "}
-        <Link to="/technician/login" className="role-link">Technician Login</Link>
       </p>
     </div>
   );
 }
+
+const styles = {
+  container: {
+    width: "380px",
+    margin: "90px auto",
+    padding: "40px 32px",
+    borderRadius: "14px",
+    boxShadow: "0 10px 30px rgba(0,0,0,0.15)",
+    textAlign: "center"
+  },
+  button: {
+    marginTop: "15px",
+    padding: "10px 25px",
+    background: "#5b5be0",
+    color: "white",
+    border: "none",
+    borderRadius: "6px"
+  }
+};
